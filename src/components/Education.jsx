@@ -14,7 +14,7 @@ const Education = () => {
     ];
 
     return (
-        <section className="w-full py-20 bg-slate-900 text-slate-50">
+        <section id="education" className="w-full py-20 bg-slate-900 text-slate-50">
             <div className="max-w-6xl mx-auto px-10">
                 <h2 className="text-4xl font-extrabold text-center mb-16 text-white">
                     Education & Leadership

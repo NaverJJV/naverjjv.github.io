@@ -18,7 +18,7 @@ const Experience = () => {
     const badgeStyle = "flex items-center gap-2 px-3 py-1 rounded-md text-sm font-medium border shadow-sm";
 
     return (
-        <section className="w-full py-20 bg-slate-50 text-slate-900">
+        <section id="experience" className="w-full py-20 bg-slate-50 text-slate-900">
             <div className="max-w-6xl mx-auto px-10">
                 <h2 className="text-4xl font-extrabold text-center mb-16 text-slate-800">
                     Professional Experience
