@@ -8,7 +8,8 @@ import {
 import {TbBrandCSharp} from 'react-icons/tb';
 import {VscAzure, VscCode} from 'react-icons/vsc'; // Using VscCode for Visual Studio
 import {AiOutlineApi} from 'react-icons/ai';
-import {DiMsqlServer} from 'react-icons/di'; // Stable SQL Server icon
+import {DiMsqlServer} from 'react-icons/di';
+import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
 
 const Experience = () => {
     // Reusable styling for the tech badges
