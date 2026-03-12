@@ -78,7 +78,7 @@ const Projects = () => {
         <section className="w-full py-20 bg-white text-slate-900">
             <div className="max-w-6xl mx-auto px-10">
                 <h2 className="text-4xl font-extrabold text-center mb-16 text-slate-800">
-                    Technical Projects
+                    Projects
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
