@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/', // Use '/' for user pages (username.github.io)
+  base: '/', // Base url
 })
