@@ -52,7 +52,7 @@ const Experience = () => {
                         dateClassName="text-slate-500 lg:text-slate-800 font-semibold"
                         iconStyle={{ background: '#2563eb', color: '#fff' }}
                     >
-                        <h3 className="text-2xl font-bold">Senior Design Development Manager</h3>
+                        <h3 className="text-2xl font-bold">Development Manager</h3>
                         <h4 className="text-lg text-blue-400 mt-1">Nebraska Public Media (UNL Senior Design)</h4>
                         <p className="mt-4 text-slate-300 font-light leading-relaxed">
                             Managed the initial architectural setup for a high-stakes production application for the regional PBS affiliate. Integrated proprietary Node-based packages (Run3TV by PearlTV) and established the core <strong className="text-white">CI/CD pipelines, GitHub workflows, and release deployments</strong>.
