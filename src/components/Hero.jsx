@@ -24,9 +24,9 @@ const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
-                    className="mt-4 text-xl text-slate-400 font-mono"
+                    className="mt-4 text-xl text-blue-400 font-mono"
                 >
-                    Software Engineer | 3+ Years Production Experience
+                    Software Engineer | Versatile Systems & Application Development
                 </motion.p>
 
                 <motion.div
@@ -35,9 +35,27 @@ const Hero = () => {
                     transition={{ delay: 1 }}
                     className="mt-6 text-lg leading-relaxed text-slate-300"
                 >
-                    Expert in **Python, SQL, and CI/CD pipelines**. I focus on
-                    modernizing enterprise workflows and building durable infrastructure
-                    serving **17,000+ users**.
+                    With over **3 years of production experience**, I build
+                    resilient infrastructure across a wide variety of tech stacks. My
+                    work ranges from **modernizing .NET legacy systems in Azure**
+                    to **architecting real-time data pipelines** using ClickHouse and
+                    PostgreSQL. I focus on delivering scalable solutions
+                    whether the environment is high-volume automation or enterprise ETL
+                    workflows.
+                </motion.div>
+
+                {/* Breadth of Stack Tags */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.2 }}
+                    className="mt-8 flex flex-wrap gap-2"
+                >
+                    {["Python", "C#", ".NET", "Java", "JavaScript", "SQL", "Django", "Azure"].map((tech) => (
+                        <span key={tech} className="px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-sm text-slate-400">
+              {tech}
+            </span>
+                    ))}
                 </motion.div>
 
                 <motion.button
@@ -45,13 +63,12 @@ const Hero = () => {
                     whileTap={{ scale: 0.95 }}
                     className="mt-10 px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-full font-bold transition-colors"
                 >
-                    View My Systems
+                    Explore Projects
                 </motion.button>
             </div>
 
             {/* Right Side: Orbital Photo Animation */}
             <div className="relative w-[400px] h-[400px] flex items-center justify-center">
-                {/* The "Orbit" Path */}
                 <div className="absolute w-72 h-72 border border-slate-700 rounded-full border-dashed animate-[spin_20s_linear_infinite]" />
 
                 {photos.map((src, index) => (
@@ -62,23 +79,22 @@ const Hero = () => {
                             rotate: 360,
                         }}
                         transition={{
-                            duration: 15,
+                            duration: 20,
                             repeat: Infinity,
                             ease: "linear",
-                            delay: index * 7.5, // Offsets the photos so they aren't on top of each other
+                            delay: index * 10,
                         }}
-                        style={{ originX: "200px", originY: "50%" }} // Rotates around center
+                        style={{ originX: "200px", originY: "50%" }}
                     >
                         <img
                             src={src}
                             alt="Jacob Vaccaro"
                             className="w-full h-full object-cover rounded-full border-4 border-blue-500 shadow-xl"
-                            style={{ transform: `rotate(-${index * 360}deg)` }} // Keeps images upright
+                            style={{ transform: `rotate(-${index * 360}deg)` }}
                         />
                     </motion.div>
                 ))}
 
-                {/* Center Focal Point */}
                 <div className="w-24 h-24 bg-blue-600/20 blur-3xl rounded-full animate-pulse" />
             </div>
 
