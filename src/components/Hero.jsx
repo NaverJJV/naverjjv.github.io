@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
-const Hero = () => {
+// Accept the onNavigate prop passed from App.jsx
+const Hero = ({ onNavigate }) => {
     const photos = [
         "/photo1.jpg",
         "/photo2.jpg",
@@ -8,9 +9,9 @@ const Hero = () => {
     ];
 
     return (
-        <section className="relative w-full h-screen mx-auto flex flex-col md:flex-row items-center justify-between px-10 bg-slate-900 text-white overflow-hidden">
+        // Added id="summary" here
+        <section id="summary" className="relative w-full h-screen mx-auto flex flex-col md:flex-row items-center justify-between px-10 bg-slate-900 text-white overflow-hidden">
 
-            {/* Left Side: Content */}
             <div className="z-10 max-w-2xl">
                 <motion.h1
                     initial={{ opacity: 0, x: -50 }}
@@ -43,29 +44,29 @@ const Hero = () => {
                     workflows.
                 </motion.div>
 
-                {/* Breadth of Stack Tags */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.2 }}
                     className="mt-8 flex flex-wrap gap-2"
                 >
-                    {["Python", "C#", ".NET", "Java", "JavaScript", "SQL", "Django", "Azure"].map((tech) => (
+                    {["Python", "C#", ".NET", "Java", "JavaScript", "SQL", "Django", "Azure", "React", "Full Stack Development", "Web Design & Development"].map((tech) => (
                         <span key={tech} className="px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-sm text-slate-400">
               {tech}
             </span>
                     ))}
                 </motion.div>
 
-                {/* Navigation Links */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.4 }}
                     className="mt-10 flex flex-wrap gap-4"
                 >
+                    {/* Added onClick={onNavigate} to all three links */}
                     <motion.a
                         href="#experience"
+                        onClick={onNavigate}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-full font-bold transition-colors inline-block"
@@ -74,6 +75,7 @@ const Hero = () => {
                     </motion.a>
                     <motion.a
                         href="#projects"
+                        onClick={onNavigate}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full font-bold transition-colors inline-block text-slate-300"
@@ -82,6 +84,7 @@ const Hero = () => {
                     </motion.a>
                     <motion.a
                         href="#education"
+                        onClick={onNavigate}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full font-bold transition-colors inline-block text-slate-300"
@@ -91,7 +94,6 @@ const Hero = () => {
                 </motion.div>
             </div>
 
-            {/* Right Side: Orbital Photo Animation */}
             <div className="relative w-[400px] h-[400px] flex items-center justify-center">
                 <div className="absolute w-72 h-72 border border-slate-700 rounded-full border-dashed animate-[spin_20s_linear_infinite]" />
 
