@@ -2,6 +2,7 @@ import {FaNodeJs, FaGithub, FaJava, FaDatabase} from 'react-icons/fa';
 import {SiMongodb, SiPostgresql} from 'react-icons/si';
 import {TbBrandCSharp} from 'react-icons/tb';
 import {VscAzure} from 'react-icons/vsc';
+import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
 
 const Experience = () => {
     return (
