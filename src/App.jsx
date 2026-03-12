@@ -6,6 +6,7 @@ function App() {
         <main className="bg-slate-900">
             <Hero />
             <Experience />
+            <Projects />
         </main>
     );
 }
