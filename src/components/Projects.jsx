@@ -1,15 +1,59 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLock, FaExternalLinkAlt } from 'react-icons/fa';
-import { SiPython, SiReact, SiNodedotjs, SiMysql, SiDjango } from 'react-icons/si';
+import { FaGithub, FaLock, FaTv } from 'react-icons/fa';
 
 const Projects = () => {
     const projects = [
         {
-            title: "Athena Automation Agent",
-            date: "Late 2022 - Present",
+            title: "NextGenTV ATSC 3.0 Application (Nebraska Public Media)",
+            date: "August 2024 - Present",
+            type: "Client Project",
+            featured: true, // This flag makes the card span full width
+            description: `
+        <p class="mb-3">Developed a comprehensive Smart TV application for over-the-air distribution on the ATSC 3.0 standard. Built using the Run3TV framework with a custom Q-Bar navigation system, the suite includes six core sub-applications:</p>
+        <ul class="list-disc ml-6 space-y-2 mb-5 text-slate-700">
+          <li><strong class="text-slate-900">Live & On-Demand Video:</strong> Built a custom Video.js player to stream three live broadcast channels and integrated private NPM APIs to serve on-demand programming (Backyard Farmer, PBS Newshour, Austin City Limits).</li>
+          <li><strong class="text-slate-900">Dynamic Weather:</strong> Connected the National Weather Service API to render zip-code-specific conditions, localized forecasts, and national radar with dynamic UI animations.</li>
+          <li><strong class="text-slate-900">Interactive Modules:</strong> Engineered an educational card matching game with global leaderboards, a QR-linked User Guide, and a Connect With Us revolving portal for social media and donations.</li>
+        </ul>
+        <div class="px-4 py-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-900 font-medium text-sm shadow-sm">
+          🏆 <strong class="text-blue-950">Accolades:</strong> Winner of the UNL Faculty Platinum Award (Top Project 2024-2025). Showcased by PearlTV at the NAB Conference in Las Vegas to demonstrate the capabilities of the Run3TV Framework.
+        </div>
+      `,
+            tech: ["ATSC 3.0", "Run3TV", "Video.js", "NWS API", "REST APIs", "JavaScript"],
+            icon: <FaTv className="text-blue-600" />
+        },
+        {
+            title: "Folklore & Character Database App",
+            date: "March 2026",
+            type: "Open Source",
+            description: "Developed a centralized archive for storing and displaying character profiles and stories grounded in American folklore. The system is designed to organize narratives and historical research around figures like John Henry and Jesse James.",
+            tech: ["React", "Data Archiving", "GitHub Pages"],
+            icon: <FaGithub className="text-slate-800" />,
+            link: "https://github.com/NaverJJV/FolkloreCharacterArchive"
+        },
+        {
+            title: "Secure Chat Application",
+            date: "October 2025 - December 2025",
             type: "Closed Source",
-            description: "Engineered a production-grade automation agent serving <strong className='text-slate-900'>17,000+ users</strong>. Handled real-time data processing, state management, and NLP logic for probabilistic text generation. Designed a custom JSON-based storage system for moderation and access controls.",
-            tech: ["Python", "NLP", "JSON Storage"],
+            description: "Architected a custom-built, self-hostable communication platform to demonstrate <strong className='text-slate-900'>software security principles</strong>. Features end-to-end encrypted messaging and secure user profile management, mimicking modern platforms like WhatsApp.",
+            tech: ["Node.js", "React", "Cryptography"],
+            icon: <FaLock className="text-slate-400" />
+        },
+        {
+            title: "Zulip Core Contributions",
+            date: "Spring 2024",
+            type: "Open Source",
+            description: "Contributed to a high-volume open-source communication platform (often described as 'Discord for Developers'). Collaborated with a small team to implement global notification volume controls and customizable alert sound logic.",
+            tech: ["Python", "Django", "PostgreSQL"],
+            icon: <FaGithub className="text-slate-800" />,
+            link: "https://github.com/zulip/zulip"
+        },
+        {
+            title: "Travel Planner Application",
+            date: "May 2023",
+            type: "Closed Source",
+            description: "Built a multi-layered architecture application for comprehensive trip planning. Connected a Python backend to a MySQL database using <strong className='text-slate-900'>SQLAlchemy</strong> to ensure reliable data persistence and retrieval.",
+            tech: ["Python", "Kivy", "MySQL", "SQLAlchemy"],
             icon: <FaLock className="text-slate-400" />
         },
         {
@@ -21,38 +65,12 @@ const Projects = () => {
             icon: <FaLock className="text-slate-400" />
         },
         {
-            title: "Travel Planner Application",
-            date: "May 2023",
+            title: "Athena Automation Agent",
+            date: "Late 2022 - Present",
             type: "Closed Source",
-            description: "Built a multi-layered architecture application for comprehensive trip planning. Connected a Python backend to a MySQL database using <strong className='text-slate-900'>SQLAlchemy</strong> to ensure reliable data persistence and retrieval.",
-            tech: ["Python", "Kivy", "MySQL", "SQLAlchemy"],
+            description: "Engineered a production-grade automation agent serving <strong className='text-slate-900'>17,000+ users</strong>. Handled real-time data processing, state management, and NLP logic for probabilistic text generation. Designed a custom JSON-based storage system for moderation and access controls.",
+            tech: ["Python", "NLP", "JSON Storage"],
             icon: <FaLock className="text-slate-400" />
-        },
-        {
-            title: "Zulip Core Contributions",
-            date: "Spring 2024",
-            type: "Open Source",
-            description: "Contributed to a high-volume open-source communication platform utilized by developers worldwide. Collaborated with a small team to implement global notification volume controls and customizable alert sound logic.",
-            tech: ["Python", "Django", "PostgreSQL"],
-            icon: <FaGithub className="text-slate-800" />,
-            link: "https://github.com/zulip/zulip" // Optional: Link to the main repo
-        },
-        {
-            title: "Secure Chat Application",
-            date: "October 2025 - December 2025",
-            type: "Closed Source",
-            description: "Architected a custom-built, self-hostable communication platform to demonstrate <strong className='text-slate-900'>software security principles</strong>. Features end-to-end encrypted messaging and secure user profile management.",
-            tech: ["Node.js", "React", "Cryptography"],
-            icon: <FaLock className="text-slate-400" />
-        },
-        {
-            title: "Folklore & Character Database App",
-            date: "March 2026",
-            type: "Open Source",
-            description: "Developed a centralized archive for storing and displaying character profiles and stories grounded in American folklore. The system is designed to organize narratives and historical research around figures like John Henry and Jesse James.",
-            tech: ["React", "Data Archiving", "GitHub Pages"],
-            icon: <FaGithub className="text-slate-800" />,
-            link: "https://github.com/NaverJJV/FolkloreCharacterArchive"
         }
     ];
 
@@ -71,7 +89,8 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="flex flex-col bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+                            // Conditionally apply the col-span classes if the project is featured
+                            className={`flex flex-col bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow ${project.featured ? 'md:col-span-2 lg:col-span-3' : ''}`}
                         >
                             <div className="flex justify-between items-start mb-4">
                                 <div>
@@ -90,13 +109,13 @@ const Projects = () => {
                             </div>
 
                             <div className="mb-4">
-                <span className={`text-xs font-bold px-2 py-1 rounded-md ${project.type === 'Open Source' ? 'bg-green-100 text-green-700' : 'bg-slate-200 text-slate-600'}`}>
+                <span className={`text-xs font-bold px-2 py-1 rounded-md ${project.type === 'Open Source' ? 'bg-green-100 text-green-700' : project.type === 'Client Project' ? 'bg-purple-100 text-purple-700' : 'bg-slate-200 text-slate-600'}`}>
                   {project.type}
                 </span>
                             </div>
 
-                            {/* Using dangerouslySetInnerHTML allows the <strong> tags in the string to render properly */}
-                            <p
+                            {/* Added prose class for better default spacing on the complex HTML block */}
+                            <div
                                 className="text-slate-600 text-sm leading-relaxed flex-grow"
                                 dangerouslySetInnerHTML={{ __html: project.description }}
                             />
