@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     const photos = [
-        "photo1.jpg",
-        "photo2.jpg",
-        "photo3.jpg",
+        "/photo1.jpg",
+        "/photo2.jpg",
+        "/photo3.jpg",
     ];
 
     return (
@@ -17,7 +17,7 @@ const Hero = () => {
                     animate={{ opacity: 1, x: 0 }}
                     className="text-6xl font-extrabold"
                 >
-                    Jacob Vaccaro
+                    Jake Vaccaro
                 </motion.h1>
 
                 <motion.p
@@ -35,10 +35,9 @@ const Hero = () => {
                     transition={{ delay: 1 }}
                     className="mt-6 text-lg leading-relaxed text-slate-300"
                 >
-                    With over **3 years of production experience**, I build
+                    With over <strong className="text-white">3 years of production experience</strong>, I build
                     resilient infrastructure across a wide variety of tech stacks. My
-                    work ranges from **modernizing .NET legacy systems in Azure**
-                    to **architecting real-time data pipelines** using ClickHouse and
+                    work ranges from <strong className="text-white">modernizing .NET legacy systems in Azure</strong> to <strong className="text-white">architecting real-time data pipelines</strong> using ClickHouse and
                     PostgreSQL. I focus on delivering scalable solutions
                     whether the environment is high-volume automation or enterprise ETL
                     workflows.
@@ -69,32 +68,45 @@ const Hero = () => {
 
             {/* Right Side: Orbital Photo Animation */}
             <div className="relative w-[400px] h-[400px] flex items-center justify-center">
+                {/* The dashed orbit ring */}
                 <div className="absolute w-72 h-72 border border-slate-700 rounded-full border-dashed animate-[spin_20s_linear_infinite]" />
 
-                {photos.map((src, index) => (
-                    <motion.div
-                        key={index}
-                        className="absolute w-32 h-32"
-                        animate={{
-                            rotate: 360,
-                        }}
-                        transition={{
-                            duration: 20,
-                            repeat: Infinity,
-                            ease: "linear",
-                            delay: index * 10,
-                        }}
-                        style={{ originX: "200px", originY: "50%" }}
-                    >
-                        <img
-                            src={src}
-                            alt="Jacob Vaccaro"
-                            className="w-full h-full object-cover rounded-full border-4 border-blue-500 shadow-xl"
-                            style={{ transform: `rotate(-${index * 360}deg)` }}
-                        />
-                    </motion.div>
-                ))}
+                {/* The orbiting images */}
+                {photos.map((src, index) => {
+                    // Calculate 120-degree spacing for 3 images (360 / 3)
+                    const startAngle = index * 120;
 
+                    return (
+                        <motion.div
+                            key={index}
+                            className="absolute w-32 h-32"
+                            initial={{ rotate: startAngle }}
+                            animate={{ rotate: startAngle + 360 }}
+                            transition={{
+                                duration: 20,
+                                repeat: Infinity,
+                                ease: "linear",
+                            }}
+                            style={{ originX: "200px", originY: "50%" }} // Offset rotation center
+                        >
+                            {/* Counter-rotation to keep the image upright */}
+                            <motion.img
+                                src={src}
+                                alt={`Jacob Vaccaro ${index + 1}`}
+                                className="w-full h-full object-cover rounded-full border-4 border-blue-500 shadow-xl"
+                                initial={{ rotate: -startAngle }}
+                                animate={{ rotate: -(startAngle + 360) }}
+                                transition={{
+                                    duration: 20,
+                                    repeat: Infinity,
+                                    ease: "linear",
+                                }}
+                            />
+                        </motion.div>
+                    );
+                })}
+
+                {/* Center Focal Point */}
                 <div className="w-24 h-24 bg-blue-600/20 blur-3xl rounded-full animate-pulse" />
             </div>
 
