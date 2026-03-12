@@ -1,10 +1,19 @@
-import {FaNodeJs, FaGithub, FaJava, FaDatabase} from 'react-icons/fa';
-import {SiMongodb, SiPostgresql} from 'react-icons/si';
+import {
+    FaNodeJs, FaGithub, FaJava, FaDatabase, FaHtml5, FaBroadcastTower, FaBriefcase
+} from 'react-icons/fa';
+import {
+    SiMongodb, SiPostgresql, SiGoogleanalytics, SiJavascript,
+    SiDotnet, SiApachemaven, SiBootstrap
+} from 'react-icons/si';
 import {TbBrandCSharp} from 'react-icons/tb';
-import {VscAzure} from 'react-icons/vsc';
-import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
+import {VscAzure, VscCode} from 'react-icons/vsc'; // Using VscCode for Visual Studio
+import {AiOutlineApi} from 'react-icons/ai';
+import {DiMsqlServer} from 'react-icons/di'; // Stable SQL Server icon
 
 const Experience = () => {
+    // Reusable styling for the tech badges
+    const badgeStyle = "flex items-center gap-2 px-3 py-1 rounded-md text-sm font-medium border shadow-sm";
+
     return (
         <section className="w-full py-20 bg-slate-50 text-slate-900">
             <div className="max-w-6xl mx-auto px-10">
@@ -19,33 +28,28 @@ const Experience = () => {
                         className="vertical-timeline-element--work"
                         contentStyle={{background: '#1e293b', color: '#fff', borderRadius: '0.75rem'}}
                         contentArrowStyle={{borderRight: '7px solid  #1e293b'}}
-                        date="August 2025 - Present (Expected May 2026)"
+                        date="August 2025 - Present"
                         dateClassName="text-slate-500 lg:text-slate-800 font-semibold"
-                        icon={
-                            <img
-                                src="/npm-logo.png"
-                                alt="Nebraska Public Media Logo"
-                                className="w-full h-full object-cover rounded-full bg-white shadow-sm border-2 border-slate-200"
-                            />
-                        }
+                        iconStyle={{background: '#2563eb', color: '#fff'}}
+                        icon={<FaBriefcase/>}
                     >
                         <h3 className="text-2xl font-bold">Product Manager & Squad Lead</h3>
-                        <h4 className="text-lg text-blue-400 mt-1">Nebraska Public Media (UNL Senior Design)</h4>
+                        <h4 className="text-lg text-blue-400 mt-1">Nebraska Public Media</h4>
                         <p className="mt-4 text-slate-300 font-light leading-relaxed">
-                            Asked to return for a second year to lead the development squad. Responsible for managing a
-                            cross-functional team of five developers and serving as the primary communication liaison
-                            between the engineering team, UNL Faculty, and Nebraska Public Media stakeholders.
+                            Leading the development squad for a production-grade application. I manage a
+                            cross-functional team of five developers and serve as the primary liaison between
+                            engineering and stakeholders.
                         </p>
 
-                        {/* Tech Stack Badges */}
                         <div className="mt-6 flex flex-wrap gap-3">
-              <span
-                  className="flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-md text-sm text-slate-200 font-medium border border-slate-600">
-                <FaNodeJs className="text-green-500 text-lg"/> Node.js
+              <span className={`${badgeStyle} bg-slate-700 border-slate-600 text-slate-200`}>
+                <SiGoogleanalytics className="text-orange-400"/> Google Analytics
               </span>
-                            <span
-                                className="flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-md text-sm text-slate-200 font-medium border border-slate-600">
-                <FaGithub className="text-white text-lg"/> GitHub Pages
+                            <span className={`${badgeStyle} bg-slate-700 border-slate-600 text-slate-200`}>
+                <AiOutlineApi className="text-blue-400"/> APIs
+              </span>
+                            <span className={`${badgeStyle} bg-slate-700 border-slate-600 text-slate-200`}>
+                <SiJavascript className="text-yellow-400"/> JavaScript
               </span>
                         </div>
                     </VerticalTimelineElement>
@@ -62,34 +66,35 @@ const Experience = () => {
                         contentArrowStyle={{borderRight: '7px solid  #e2e8f0'}}
                         date="June 2025 - August 2025"
                         dateClassName="text-slate-500 lg:text-slate-800 font-semibold"
-                        icon={
-                            <img
-                                src="/quest-logo.png"
-                                alt="Quest Analytics Logo"
-                                className="w-full h-full object-contain rounded-full bg-white shadow-sm p-1 border-2 border-slate-200"
-                            />
-                        }
+                        iconStyle={{background: '#0284c7', color: '#fff'}}
+                        icon={<FaBriefcase/>}
                     >
                         <h3 className="text-2xl font-bold">Software Engineering Intern</h3>
-                        <h4 className="text-lg text-sky-600 mt-1">Quest Analytics, LLC | Overland Park, KS</h4>
+                        <h4 className="text-lg text-sky-600 mt-1">Quest Analytics, LLC</h4>
                         <p className="mt-4 text-slate-700 font-light leading-relaxed">
-                            Assigned to the <strong className="text-slate-900">"Bravo" team</strong> to develop and
-                            modernize features for Quest Enterprise Services. Built and maintained tools utilized by
-                            healthcare providers to manage provider networks and ensure regulatory compliance.
+                            Modernized features for Quest Enterprise Services within the <strong
+                            className="text-slate-900">"Bravo" team</strong>. Focused on healthcare provider management
+                            tools and regulatory compliance systems.
                         </p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
-              <span
-                  className="flex items-center gap-2 px-3 py-1 bg-white rounded-md text-sm text-slate-700 font-medium border border-slate-300 shadow-sm">
-                <TbBrandCSharp className="text-purple-600 text-lg"/> C#
+              <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <TbBrandCSharp className="text-purple-600"/> C#
               </span>
-                            <span
-                                className="flex items-center gap-2 px-3 py-1 bg-white rounded-md text-sm text-slate-700 font-medium border border-slate-300 shadow-sm">
-                <VscAzure className="text-blue-600 text-lg"/> Azure Cloud
+                            <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <SiDotnet className="text-blue-700"/> .NET
               </span>
-                            <span
-                                className="flex items-center gap-2 px-3 py-1 bg-white rounded-md text-sm text-slate-700 font-medium border border-slate-300 shadow-sm">
-                <SiMongodb className="text-green-600 text-lg"/> MongoDB
+                            <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <DiMsqlServer className="text-red-700"/> SQL Server
+              </span>
+                            <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <VscCode className="text-purple-500"/> Visual Studio
+              </span>
+                            <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <VscAzure className="text-blue-500"/> Azure
+              </span>
+                            <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <SiMongodb className="text-green-600"/> MongoDB
               </span>
                         </div>
                     </VerticalTimelineElement>
@@ -101,36 +106,34 @@ const Experience = () => {
                         contentArrowStyle={{borderRight: '7px solid  #1e293b'}}
                         date="August 2024 - May 2025"
                         dateClassName="text-slate-500 lg:text-slate-800 font-semibold"
-                        icon={
-                            <img
-                                src="/npm-logo.png"
-                                alt="Nebraska Public Media Logo"
-                                className="w-full h-full object-cover rounded-full bg-white shadow-sm border-2 border-slate-200"
-                            />
-                        }
+                        iconStyle={{background: '#2563eb', color: '#fff'}}
+                        icon={<FaBriefcase/>}
                     >
                         <h3 className="text-2xl font-bold">Development Manager</h3>
-                        <h4 className="text-lg text-blue-400 mt-1">Nebraska Public Media (UNL Senior Design)</h4>
+                        <h4 className="text-lg text-blue-400 mt-1">Nebraska Public Media</h4>
                         <p className="mt-4 text-slate-300 font-light leading-relaxed">
-                            Managed the initial architectural setup for a high-stakes production application for the
-                            regional PBS affiliate. Integrated proprietary Node-based packages and established the
-                            core <strong className="text-white">CI/CD pipelines, GitHub workflows, and release
-                            deployments</strong>.
+                            Orchestrated the architectural setup and <strong className="text-white">CI/CD
+                            pipelines</strong> for the NextGenTV ATSC 3.0 application. Managed release deployments and
+                            proprietary framework integrations.
                         </p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
-              <span
-                  className="flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-md text-sm text-slate-200 font-medium border border-slate-600">
-                <FaNodeJs className="text-green-500 text-lg"/> Node.js
+              <span className={`${badgeStyle} bg-slate-700 border-slate-600 text-slate-200`}>
+                <FaBroadcastTower className="text-red-400"/> ATSC 3.0
               </span>
-                            <span
-                                className="flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-md text-sm text-slate-200 font-medium border border-slate-600">
-                <FaGithub className="text-white text-lg"/> CI/CD
+                            <span className={`${badgeStyle} bg-slate-700 border-slate-600 text-slate-200`}>
+                <FaNodeJs className="text-green-500"/> Node.js
+              </span>
+                            <span className={`${badgeStyle} bg-slate-700 border-slate-600 text-slate-200`}>
+                <SiJavascript className="text-yellow-400"/> JavaScript
+              </span>
+                            <span className={`${badgeStyle} bg-slate-700 border-slate-600 text-slate-200`}>
+                <FaHtml5 className="text-orange-500"/> HTML5
               </span>
                         </div>
                     </VerticalTimelineElement>
 
-                    {/* Node 4: Building Automation */}
+                    {/* Node 4: OT */}
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
                         contentStyle={{
@@ -142,34 +145,31 @@ const Experience = () => {
                         contentArrowStyle={{borderRight: '7px solid  #e2e8f0'}}
                         date="August 2024 - May 2025"
                         dateClassName="text-slate-500 lg:text-slate-800 font-semibold"
-                        icon={
-                            <img
-                                src="/nebraska-n.jpg"
-                                alt="University of Nebraska Logo"
-                                className="w-full h-full object-cover rounded-full bg-white shadow-sm p-1 border-2 border-slate-200"
-                            />
-                        }
+                        iconStyle={{background: '#0284c7', color: '#fff'}}
+                        icon={<FaBriefcase/>}
                     >
                         <h3 className="text-2xl font-bold">Software Intern</h3>
                         <h4 className="text-lg text-sky-600 mt-1">Operational Technology (University of Nebraska)</h4>
                         <p className="mt-4 text-slate-700 font-light leading-relaxed">
-                            Developed features for <strong className="text-slate-900">Redbeam</strong>, a proprietary
-                            internal software system used to manage and monitor custom-built HVAC devices across all
-                            four University of Nebraska campuses.
+                            Developed features for <strong className="text-slate-900">Redbeam</strong>, managing
+                            in-house HVAC hardware across all four university campuses.
                         </p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
-              <span
-                  className="flex items-center gap-2 px-3 py-1 bg-white rounded-md text-sm text-slate-700 font-medium border border-slate-300 shadow-sm">
-                <FaJava className="text-orange-600 text-lg"/> Java
+              <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <FaJava className="text-orange-600"/> Java
               </span>
-                            <span
-                                className="flex items-center gap-2 px-3 py-1 bg-white rounded-md text-sm text-slate-700 font-medium border border-slate-300 shadow-sm">
-                <SiPostgresql className="text-blue-500 text-lg"/> PostgreSQL
+                            <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <SiApachemaven className="text-red-500"/> Maven
               </span>
-                            <span
-                                className="flex items-center gap-2 px-3 py-1 bg-white rounded-md text-sm text-slate-700 font-medium border border-slate-300 shadow-sm">
-                <FaDatabase className="text-slate-500 text-lg"/> ClickHouse OLAP
+                            <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <SiPostgresql className="text-blue-500"/> PostgreSQL
+              </span>
+                            <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <FaDatabase className="text-slate-500"/> ClickHouse
+              </span>
+                            <span className={`${badgeStyle} bg-white border-slate-300 text-slate-700`}>
+                <SiBootstrap className="text-purple-600"/> Bootstrap
               </span>
                         </div>
                     </VerticalTimelineElement>
