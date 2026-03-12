@@ -50,7 +50,7 @@ const Hero = () => {
                     transition={{ delay: 1.2 }}
                     className="mt-8 flex flex-wrap gap-2"
                 >
-                    {["Python", "C#", ".NET", "Java", "JavaScript", "SQL", "Django", "Azure"].map((tech) => (
+                    {["Python", "C#", ".NET", "Java", "JavaScript", "SQL", "Django", "Azure", "React"].map((tech) => (
                         <span key={tech} className="px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-sm text-slate-400">
               {tech}
             </span>
