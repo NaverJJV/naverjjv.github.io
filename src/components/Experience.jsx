@@ -35,7 +35,7 @@ const Experience = () => {
                         iconStyle={{ background: '#2563eb', color: '#fff' }}
                     >
                         <h3 className="text-2xl font-bold">Product Manager & Squad Lead</h3>
-                        <h4 className="text-lg text-blue-400 mt-1">Nebraska Public Media (UNL Senior Design)</h4>
+                        <h4 className="text-lg text-blue-400 mt-1">Nebraska Public Media (UNL Senior Design) | Lincoln, NE</h4>
                         <p className="mt-4 text-slate-300 font-light leading-relaxed">
                             Leading a cross-functional squad of five developers for a production-level application. I serve as the primary communication liaison between engineering and stakeholders for Nebraska Public Media.
                         </p>
@@ -98,7 +98,7 @@ const Experience = () => {
                         iconStyle={{ background: '#2563eb', color: '#fff' }}
                     >
                         <h3 className="text-2xl font-bold">Development Manager</h3>
-                        <h4 className="text-lg text-blue-400 mt-1">Nebraska Public Media (UNL Senior Design)</h4>
+                        <h4 className="text-lg text-blue-400 mt-1">Nebraska Public Media (UNL Senior Design) | Lincoln, NE</h4>
                         <p className="mt-4 text-slate-300 font-light leading-relaxed">
                             Managed the initial architectural setup and <strong className="text-white">CI/CD pipelines</strong> for the NextGenTV ATSC 3.0 application. Built using the Run3TV framework for regional PBS affiliates.
                         </p>
@@ -128,7 +128,7 @@ const Experience = () => {
                         iconStyle={{ background: '#0284c7', color: '#fff' }}
                     >
                         <h3 className="text-2xl font-bold">Software Intern</h3>
-                        <h4 className="text-lg text-sky-600 mt-1">Operational Technology (University of Nebraska)</h4>
+                        <h4 className="text-lg text-sky-600 mt-1">Operational Technology (University of Nebraska) | Lincoln, NE</h4>
                         <p className="mt-4 text-slate-700 font-light leading-relaxed">
                             Architected core functionality for <strong className="text-slate-900">Redbeam</strong>, an internal Energy Management System managing HVAC hardware across all four University of Nebraska campuses.
                         </p>
