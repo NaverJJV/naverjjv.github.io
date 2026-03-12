@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     const photos = [
-        "/photo1.jpg",
-        "/photo2.jpg",
-        "/photo3.jpg",
+        "/assets/photo1.jpg",
+        "/assets/photo2.jpg",
+        "/assets/photo3.jpg",
     ];
 
     return (
