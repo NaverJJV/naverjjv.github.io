@@ -21,8 +21,11 @@ const Hero = ({onNavigate}) => {
         {name: "Node.js", icon: <FaNodeJs className="text-green-500 text-lg"/>},
         {name: "SQL", icon: <TbDatabase className="text-red-400 text-lg"/>},
         {name: "Azure", icon: <VscAzure className="text-blue-400 text-lg"/>},
+        {name: "Agile Development"},
+        {name: "Project Management"},
         {name: "Full Stack Development"},
         {name: "Web Development & Design"},
+        {name: "Leadership"},
     ];
 
     return (
