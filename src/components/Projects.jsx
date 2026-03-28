@@ -24,7 +24,7 @@ const Projects = () => {
         },
         {
             title: "Folklore & Character Database App",
-            date: "March 2026",
+            date: "March 2026 - Present",
             type: "Open Source",
             description: "Developed a centralized archive for storing and displaying character profiles and stories grounded in American folklore. The system is designed to organize narratives and historical research around figures like John Henry and Jesse James.",
             tech: ["React", "Node.js", "PostgreSQL", "Data Archiving", "Full Stack Development"],
