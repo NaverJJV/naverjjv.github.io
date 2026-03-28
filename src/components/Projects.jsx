@@ -44,7 +44,7 @@ const Projects = () => {
             date: "Spring 2024",
             type: "Open Source",
             description: "Contributed to a high-volume open-source communication platform (often described as 'Discord for Developers'). Collaborated with a small team to implement global notification volume controls and customizable alert sound logic.",
-            tech: ["TypeScript", "Django", "PostgreSQL"],
+            tech: ["TypeScript", "Django", "PostgreSQL", "Web Development"],
             icon: <FaGithub className="text-slate-800"/>,
             link: "https://github.com/zulip/zulip"
         },
@@ -69,7 +69,7 @@ const Projects = () => {
             date: "Late 2022 - Present",
             type: "Closed Source",
             description: "Engineered a production-grade automation agent serving <strong className='text-slate-900'>17,000+ users</strong>. Handled real-time data processing, state management, and NLP logic for probabilistic text generation. Designed a custom JSON-based storage system for moderation and access controls.",
-            tech: ["Python", "NLP", "JSON Storage", "Markov Chaining (AI)"],
+            tech: ["Python", "NLP", "JSON Storage", "Blizzard Entertainment APIs", "Markov Chaining (AI)"],
             icon: <FaLock className="text-slate-400"/>
         }
     ];
