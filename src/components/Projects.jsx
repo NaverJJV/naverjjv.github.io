@@ -42,7 +42,7 @@ const Projects = () => {
         },
         {
             title: "Zulip Core Contributions",
-            date: "Spring 2024",
+            date: "March - May 2024",
             type: "Open Source",
             description: "Contributed to a high-volume open-source communication platform (often described as 'Discord for Developers'). Collaborated with a small team to implement global notification volume controls and customizable alert sound logic.",
             tech: ["TypeScript", "Django", "PostgreSQL", "Web Development"],
@@ -51,7 +51,7 @@ const Projects = () => {
         },
         {
             title: "Travel Planner Application",
-            date: "May 2023",
+            date: "April - May 2023",
             type: "Closed Source",
             description: "Built a multi-layered architecture application for comprehensive trip planning. Connected a Python backend to a MySQL database using <strong className='text-slate-900'>SQLAlchemy</strong> to ensure reliable data persistence and retrieval.",
             tech: ["Python", "Kivy", "MySQL", "SQLAlchemy"],
@@ -59,7 +59,7 @@ const Projects = () => {
         },
         {
             title: "Burn Plan Evaluator App",
-            date: "December 2022",
+            date: "November - December 2022",
             type: "Closed Source",
             description: "Developed an application to evaluate the legality of agricultural burn plans under Tennessee State Law. Integrated a REST API to dynamically gather and process localized weather forecasts to determine compliance.",
             tech: ["REST APIs", "Data Routing", "Java"],
