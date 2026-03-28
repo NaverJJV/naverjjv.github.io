@@ -4,7 +4,7 @@ import {SiJavascript, SiDotnet, SiPython} from "react-icons/si";
 import {TbBrandCSharp, TbDatabase} from "react-icons/tb";
 import {VscAzure} from "react-icons/vsc";
 
-const Hero = ({onNavigate}) => {
+const Hero = () => {
     const photos = [
         "/photo1.jpg",
         "/photo2.jpg",
@@ -96,16 +96,14 @@ const Hero = ({onNavigate}) => {
                 >
                     <motion.a
                         href="#experience"
-                        onClick={onNavigate}
-                        whileHover={{scale: 1.05}}
-                        whileTap={{scale: 0.95}}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                         className="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-full font-bold transition-colors inline-block"
                     >
                         Experience
                     </motion.a>
                     <motion.a
                         href="#projects"
-                        onClick={onNavigate}
                         whileHover={{scale: 1.05}}
                         whileTap={{scale: 0.95}}
                         className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full font-bold transition-colors inline-block text-slate-300"
@@ -114,7 +112,6 @@ const Hero = ({onNavigate}) => {
                     </motion.a>
                     <motion.a
                         href="#education"
-                        onClick={onNavigate}
                         whileHover={{scale: 1.05}}
                         whileTap={{scale: 0.95}}
                         className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full font-bold transition-colors inline-block text-slate-300"
