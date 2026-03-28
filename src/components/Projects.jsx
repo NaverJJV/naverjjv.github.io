@@ -7,7 +7,7 @@ const Projects = () => {
             title: "NextGenTV ATSC 3.0 Application (Nebraska Public Media)",
             date: "August 2024 - Present",
             type: "Client Project",
-            featured: true, // This flag makes the card span full width
+            featured: true,
             description: `
         <p class="mb-3">Developed a comprehensive Smart TV application for over-the-air distribution on the ATSC 3.0 standard. Built using the Run3TV framework with a custom Q-Bar navigation system, the suite includes six core sub-applications:</p>
         <ul class="list-disc ml-6 space-y-2 mb-5 text-slate-700">
@@ -19,7 +19,7 @@ const Projects = () => {
           🏆 <strong class="text-blue-950">Accolades:</strong> Winner of the UNL Faculty Platinum Award (Top Project 2024-2025). Showcased by PearlTV at the NAB Conference in Las Vegas to demonstrate the capabilities of the Run3TV Framework.
         </div>
       `,
-            tech: ["ATSC 3.0", "Run3TV", "Video.js", "NWS API", "REST APIs", "JavaScript"],
+            tech: ["ATSC 3.0", "Run3TV", "Video.js", "NWS API", "REST APIs", "JavaScript", "HTML", "Google Analytics/Google Tag Manager", "TV Development"],
             icon: <FaTv className="text-blue-600"/>
         },
         {
@@ -27,7 +27,7 @@ const Projects = () => {
             date: "March 2026",
             type: "Open Source",
             description: "Developed a centralized archive for storing and displaying character profiles and stories grounded in American folklore. The system is designed to organize narratives and historical research around figures like John Henry and Jesse James.",
-            tech: ["React", "Data Archiving", "GitHub Pages"],
+            tech: ["React", "Node.js", "PostgreSQL", "Data Archiving", "Full Stack Development"],
             icon: <FaGithub className="text-slate-800"/>,
             link: "https://github.com/NaverJJV/FolkloreCharacterArchive"
         },
@@ -36,7 +36,7 @@ const Projects = () => {
             date: "October 2025 - December 2025",
             type: "Closed Source",
             description: "Architected a custom-built, self-hostable communication platform to demonstrate <strong className='text-slate-900'>software security principles</strong>. Features end-to-end encrypted messaging and secure user profile management, mimicking modern platforms like WhatsApp.",
-            tech: ["Node.js", "React", "Cryptography"],
+            tech: ["Node.js", "React", "WebSockets", "Secure Connections", "Cryptography"],
             icon: <FaLock className="text-slate-400"/>
         },
         {
@@ -44,7 +44,7 @@ const Projects = () => {
             date: "Spring 2024",
             type: "Open Source",
             description: "Contributed to a high-volume open-source communication platform (often described as 'Discord for Developers'). Collaborated with a small team to implement global notification volume controls and customizable alert sound logic.",
-            tech: ["Python", "Django", "PostgreSQL"],
+            tech: ["TypeScript", "Django", "PostgreSQL"],
             icon: <FaGithub className="text-slate-800"/>,
             link: "https://github.com/zulip/zulip"
         },
@@ -61,7 +61,7 @@ const Projects = () => {
             date: "December 2022",
             type: "Closed Source",
             description: "Developed an application to evaluate the legality of agricultural burn plans under Tennessee State Law. Integrated a REST API to dynamically gather and process localized weather forecasts to determine compliance.",
-            tech: ["REST APIs", "Data Routing", "Python"],
+            tech: ["REST APIs", "Data Routing", "Java"],
             icon: <FaLock className="text-slate-400"/>
         },
         {
@@ -69,7 +69,7 @@ const Projects = () => {
             date: "Late 2022 - Present",
             type: "Closed Source",
             description: "Engineered a production-grade automation agent serving <strong className='text-slate-900'>17,000+ users</strong>. Handled real-time data processing, state management, and NLP logic for probabilistic text generation. Designed a custom JSON-based storage system for moderation and access controls.",
-            tech: ["Python", "NLP", "JSON Storage"],
+            tech: ["Python", "NLP", "JSON Storage", "Markov Chaining (AI)"],
             icon: <FaLock className="text-slate-400"/>
         }
     ];
