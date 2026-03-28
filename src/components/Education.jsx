@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FaGraduationCap, FaLandmark } from "react-icons/fa";
 
 const Education = () => {
@@ -26,7 +25,7 @@ const Education = () => {
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.2 }}
                         className="bg-slate-800 rounded-xl p-8 border border-slate-700 shadow-lg"
                     >
                         <div className="flex items-center gap-4 mb-6">
@@ -60,7 +59,7 @@ const Education = () => {
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.2 }}
                         className="bg-slate-800 rounded-xl p-8 border border-slate-700 shadow-lg"
                     >
                         <div className="flex items-center gap-4 mb-6">

@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { FaGithub, FaLock, FaTv } from 'react-icons/fa';
+import {FaGithub, FaLock, FaTv} from 'react-icons/fa';
 
 const Projects = () => {
     const projects = [
@@ -20,7 +19,7 @@ const Projects = () => {
         </div>
       `,
             tech: ["ATSC 3.0", "Run3TV", "Video.js", "NWS API", "REST APIs", "JavaScript"],
-            icon: <FaTv className="text-blue-600" />
+            icon: <FaTv className="text-blue-600"/>
         },
         {
             title: "Folklore & Character Database App",
@@ -28,7 +27,7 @@ const Projects = () => {
             type: "Open Source",
             description: "Developed a centralized archive for storing and displaying character profiles and stories grounded in American folklore. The system is designed to organize narratives and historical research around figures like John Henry and Jesse James.",
             tech: ["React", "Data Archiving", "GitHub Pages"],
-            icon: <FaGithub className="text-slate-800" />,
+            icon: <FaGithub className="text-slate-800"/>,
             link: "https://github.com/NaverJJV/FolkloreCharacterArchive"
         },
         {
@@ -37,7 +36,7 @@ const Projects = () => {
             type: "Closed Source",
             description: "Architected a custom-built, self-hostable communication platform to demonstrate <strong className='text-slate-900'>software security principles</strong>. Features end-to-end encrypted messaging and secure user profile management, mimicking modern platforms like WhatsApp.",
             tech: ["Node.js", "React", "Cryptography"],
-            icon: <FaLock className="text-slate-400" />
+            icon: <FaLock className="text-slate-400"/>
         },
         {
             title: "Zulip Core Contributions",
@@ -45,7 +44,7 @@ const Projects = () => {
             type: "Open Source",
             description: "Contributed to a high-volume open-source communication platform (often described as 'Discord for Developers'). Collaborated with a small team to implement global notification volume controls and customizable alert sound logic.",
             tech: ["Python", "Django", "PostgreSQL"],
-            icon: <FaGithub className="text-slate-800" />,
+            icon: <FaGithub className="text-slate-800"/>,
             link: "https://github.com/zulip/zulip"
         },
         {
@@ -54,7 +53,7 @@ const Projects = () => {
             type: "Closed Source",
             description: "Built a multi-layered architecture application for comprehensive trip planning. Connected a Python backend to a MySQL database using <strong className='text-slate-900'>SQLAlchemy</strong> to ensure reliable data persistence and retrieval.",
             tech: ["Python", "Kivy", "MySQL", "SQLAlchemy"],
-            icon: <FaLock className="text-slate-400" />
+            icon: <FaLock className="text-slate-400"/>
         },
         {
             title: "Burn Plan Evaluator App",
@@ -62,7 +61,7 @@ const Projects = () => {
             type: "Closed Source",
             description: "Developed an application to evaluate the legality of agricultural burn plans under Tennessee State Law. Integrated a REST API to dynamically gather and process localized weather forecasts to determine compliance.",
             tech: ["REST APIs", "Data Routing", "Python"],
-            icon: <FaLock className="text-slate-400" />
+            icon: <FaLock className="text-slate-400"/>
         },
         {
             title: "Athena Automation Agent",
@@ -70,7 +69,7 @@ const Projects = () => {
             type: "Closed Source",
             description: "Engineered a production-grade automation agent serving <strong className='text-slate-900'>17,000+ users</strong>. Handled real-time data processing, state management, and NLP logic for probabilistic text generation. Designed a custom JSON-based storage system for moderation and access controls.",
             tech: ["Python", "NLP", "JSON Storage"],
-            icon: <FaLock className="text-slate-400" />
+            icon: <FaLock className="text-slate-400"/>
         }
     ];
 
@@ -85,11 +84,10 @@ const Projects = () => {
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            // Conditionally apply the col-span classes if the project is featured
+                            initial={{opacity: 0, y: 20}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: false, amount: 0.1}}
+                            transition={{delay: index * 0.1}}
                             className={`flex flex-col bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow ${project.featured ? 'md:col-span-2 lg:col-span-3' : ''}`}
                         >
                             <div className="flex justify-between items-start mb-4">
@@ -98,7 +96,8 @@ const Projects = () => {
                                     <p className="text-sm font-semibold text-blue-600 mt-1">{project.date}</p>
                                 </div>
                                 {project.link ? (
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-200 rounded-full hover:bg-slate-300 transition-colors">
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer"
+                                       className="p-2 bg-slate-200 rounded-full hover:bg-slate-300 transition-colors">
                                         {project.icon}
                                     </a>
                                 ) : (
@@ -109,7 +108,8 @@ const Projects = () => {
                             </div>
 
                             <div className="mb-4">
-                <span className={`text-xs font-bold px-2 py-1 rounded-md ${project.type === 'Open Source' ? 'bg-green-100 text-green-700' : project.type === 'Client Project' ? 'bg-purple-100 text-purple-700' : 'bg-slate-200 text-slate-600'}`}>
+                <span
+                    className={`text-xs font-bold px-2 py-1 rounded-md ${project.type === 'Open Source' ? 'bg-green-100 text-green-700' : project.type === 'Client Project' ? 'bg-purple-100 text-purple-700' : 'bg-slate-200 text-slate-600'}`}>
                   {project.type}
                 </span>
                             </div>
@@ -117,12 +117,13 @@ const Projects = () => {
                             {/* Added prose class for better default spacing on the complex HTML block */}
                             <div
                                 className="text-slate-600 text-sm leading-relaxed flex-grow"
-                                dangerouslySetInnerHTML={{ __html: project.description }}
+                                dangerouslySetInnerHTML={{__html: project.description}}
                             />
 
                             <div className="mt-6 flex flex-wrap gap-2">
                                 {project.tech.map((techItem, techIndex) => (
-                                    <span key={techIndex} className="text-xs font-medium px-2 py-1 bg-white border border-slate-300 rounded-md text-slate-700 shadow-sm">
+                                    <span key={techIndex}
+                                          className="text-xs font-medium px-2 py-1 bg-white border border-slate-300 rounded-md text-slate-700 shadow-sm">
                     {techItem}
                   </span>
                                 ))}

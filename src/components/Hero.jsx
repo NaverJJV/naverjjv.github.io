@@ -36,7 +36,8 @@ const Hero = ({onNavigate}) => {
             <div className="z-10 max-w-2xl">
                 <motion.h1
                     initial={{opacity: 0, x: -50}}
-                    animate={{opacity: 1, x: 0}}
+                    whileInView={{opacity: 1, x: 0}}
+                    viewport={{once: false, amount: 0.3}}
                     className="text-6xl font-extrabold"
                 >
                     Jake Vaccaro
@@ -44,8 +45,9 @@ const Hero = ({onNavigate}) => {
 
                 <motion.p
                     initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{delay: 0.5}}
+                    whileInView={{opacity: 1}}
+                    transition={{delay: 0.2}}
+                    viewport={{once: false, amount: 0.3}}
                     className="mt-4 text-xl text-blue-400 font-mono"
                 >
                     Software Engineer | Versatile Systems & Application Development
@@ -53,8 +55,9 @@ const Hero = ({onNavigate}) => {
 
                 <motion.div
                     initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{delay: 1}}
+                    whileInView={{opacity: 1}}
+                    transition={{delay: 0.4}}
+                    viewport={{once: false, amount: 0.3}}
                     className="mt-6 text-lg leading-relaxed text-slate-300"
                 >
                     With <strong className="text-white">3+ years of production experience</strong> in agile
@@ -68,8 +71,9 @@ const Hero = ({onNavigate}) => {
                 {/* Breadth of Stack Tags with Icons */}
                 <motion.div
                     initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{delay: 1.2}}
+                    whileInView={{opacity: 1}}
+                    transition={{delay: 0.6}}
+                    viewport={{once: false, amount: 0.3}}
                     className="mt-8 flex flex-wrap gap-3"
                 >
                     {techStack.map((tech, index) => (
@@ -85,8 +89,9 @@ const Hero = ({onNavigate}) => {
                 {/* Navigation Links */}
                 <motion.div
                     initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{delay: 1.4}}
+                    whileInView={{opacity: 1}}
+                    transition={{delay: 0.8}}
+                    viewport={{once: false, amount: 0.3}}
                     className="mt-10 flex flex-wrap gap-4"
                 >
                     <motion.a
