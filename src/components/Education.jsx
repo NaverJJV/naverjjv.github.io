@@ -1,4 +1,5 @@
 import { FaGraduationCap, FaLandmark } from "react-icons/fa";
+import {motion} from "framer-motion";
 
 const Education = () => {
     const coursework = [

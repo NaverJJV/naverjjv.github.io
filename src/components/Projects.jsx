@@ -1,4 +1,5 @@
 import {FaGithub, FaLock, FaTv} from 'react-icons/fa';
+import {motion} from "framer-motion";
 
 const Projects = () => {
     const projects = [
