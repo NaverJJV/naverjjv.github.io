@@ -14,6 +14,7 @@ const Projects = () => {
           <li><strong class="text-slate-900">Live & On-Demand Video:</strong> Built a custom Video.js player to stream three live broadcast channels and integrated private NPM APIs to serve on-demand programming (Backyard Farmer, PBS Newshour, Austin City Limits).</li>
           <li><strong class="text-slate-900">Dynamic Weather:</strong> Connected the National Weather Service API to render zip-code-specific conditions, localized forecasts, and national radar with dynamic UI animations.</li>
           <li><strong class="text-slate-900">Interactive Modules:</strong> Engineered an educational card matching game with global leaderboards, a QR-linked User Guide, and a Connect With Us revolving portal for social media and donations.</li>
+          <li><strong class="text-slate-900">User Analytics:</strong> Implemented User Analytics & Telemetry with Google Tag Manager to collect live data on user interactions to turn into Actionable Business Insights.</li>
         </ul>
         <div class="px-4 py-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-900 font-medium text-sm shadow-sm">
           🏆 <strong class="text-blue-950">Accolades:</strong> Winner of the UNL Faculty Platinum Award (Top Project 2024-2025). Showcased by PearlTV at the NAB Conference in Las Vegas to demonstrate the capabilities of the Run3TV Framework.
