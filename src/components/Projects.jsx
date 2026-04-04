@@ -41,8 +41,17 @@ const Projects = () => {
             icon: <FaLock className="text-slate-400"/>
         },
         {
+            title: 'ORM Diagram Generator Tool',
+            date: "December 2024",
+            type: "Open Source",
+            description: "Python based tool designed to take input from CSV structures and generate .tex files for visualizing database schemas using the TikZ package. Aimed at simplifying the process of creating clear and professional Entity-Relationship diagrams for database design documentation.",
+            tech: ["Python", "CSV Parsing", "LaTeX/TikZ", "Database Design"],
+            icon: <FaGithub className="text-slate-800"/>,
+            link: "https://github.com/NaverJJV/ORM-Diagram-Generator"
+        },
+        {
             title: "Zulip Core Contributions",
-            date: "March - May 2024",
+            date: "March 2024 - May 2024",
             type: "Open Source",
             description: "Contributed to a high-volume open-source communication platform (often described as 'Discord for Developers'). Collaborated with a small team to implement global notification volume controls and customizable alert sound logic.",
             tech: ["TypeScript", "Django", "PostgreSQL", "Web Development"],
@@ -51,7 +60,7 @@ const Projects = () => {
         },
         {
             title: "Travel Planner Application",
-            date: "April - May 2023",
+            date: "April 2023 - May 2023",
             type: "Closed Source",
             description: "Built a multi-layered architecture application for comprehensive trip planning. Connected a Python backend to a MySQL database using <strong className='text-slate-900'>SQLAlchemy</strong> to ensure reliable data persistence and retrieval.",
             tech: ["Python", "Kivy", "MySQL", "SQLAlchemy"],
@@ -59,14 +68,14 @@ const Projects = () => {
         },
         {
             title: "Burn Plan Evaluator App",
-            date: "November - December 2022",
+            date: "November 2022 - December 2022",
             type: "Closed Source",
             description: "Developed an application to evaluate the legality of agricultural burn plans under Tennessee State Law. Integrated a REST API to dynamically gather and process localized weather forecasts to determine compliance.",
             tech: ["REST APIs", "Data Routing", "Java"],
             icon: <FaLock className="text-slate-400"/>
         },
         {
-            title: "Athena Automation Agent",
+            title: "Athena",
             date: "Late 2022 - Present",
             type: "Closed Source",
             description: "Engineered a production-grade automation agent serving <strong className='text-slate-900'>17,000+ users</strong>. Handled real-time data processing, state management, and NLP logic for probabilistic text generation. Designed a custom JSON-based storage system for moderation and access controls.",
