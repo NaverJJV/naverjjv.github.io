@@ -151,7 +151,7 @@ const Hero = () => {
                                 repeat: Infinity,
                                 ease: "linear",
                             }}
-                            style={{ originX: "200px", originY: "50%" }}
+                            style={{ originX: "150px", originY: "50%" }} // spacing
                         >
                             <motion.img
                                 src={src}
