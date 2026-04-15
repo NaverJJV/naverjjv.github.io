@@ -5,6 +5,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import { FaLinkedin, FaEnvelope, FaArrowUp } from "react-icons/fa";
+import Hobbies from "./components/Hobbies.jsx";
 
 function App() {
     const [showBackToTop, setShowBackToTop] = useState(false);
@@ -34,6 +35,7 @@ function App() {
             <Experience />
             <Projects />
             <Education />
+            <Hobbies />
 
             {/* Conditional Floating Back Button */}
             <AnimatePresence>

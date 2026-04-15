@@ -118,6 +118,14 @@ const Hero = () => {
                     >
                         Education
                     </motion.a>
+                    <motion.a
+                        href="#hobbies"
+                        whileHover={{scale: 1.05}}
+                        whileTap={{scale: 0.95}}
+                        className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full font-bold transition-colors inline-block text-slate-300"
+                        >
+                        Hobbies
+                    </motion.a>
                 </motion.div>
             </div>
 
