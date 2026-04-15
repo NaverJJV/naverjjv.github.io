@@ -147,11 +147,11 @@ const Hero = () => {
                             initial={{ rotate: startAngle }}
                             animate={{ rotate: startAngle + 360 }}
                             transition={{
-                                duration: 30,
+                                duration: 30, // Slowed down slightly since there are more images moving
                                 repeat: Infinity,
                                 ease: "linear",
                             }}
-                            style={{ originX: "150px", originY: "50%" }} // spacing
+                            style={{ originX: "200px", originY: "50%" }}
                         >
                             <motion.img
                                 src={src}
