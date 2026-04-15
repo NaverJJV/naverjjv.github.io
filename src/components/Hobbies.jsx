@@ -109,7 +109,7 @@ const Hobbies = () => {
                         whileInView={{opacity: 1, y: 0}}
                         viewport={{once: false, amount: 0.2}}
                         transition={{delay: 0.4}}
-                        className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+                        className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow md:col-span-3"
                     >
                         {/* Elfsight Instagram Feed | Untitled Instagram Feed */}
                         <script src="https://elfsightcdn.com/platform.js" async></script>
