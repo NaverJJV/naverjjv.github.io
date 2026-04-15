@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
-import { FaLinkedin, FaEnvelope, FaArrowUp } from "react-icons/fa";
+import {FaLinkedin, FaEnvelope, FaArrowUp, FaInstagram} from "react-icons/fa";
 import Hobbies from "./components/Hobbies.jsx";
 
 function App() {
@@ -70,6 +70,13 @@ function App() {
                         aria-label="Email"
                     >
                         <FaEnvelope />
+                    </a>
+                    <a
+                        href="https://www.instagram.com/jakejvaccaro/"
+                        className="hover:blue transition-colors"
+                        aria-label={"Instagram"}
+                        >
+                        <FaInstagram />
                     </a>
                 </div>
 
