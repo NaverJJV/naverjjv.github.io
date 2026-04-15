@@ -134,7 +134,7 @@ const Hero = () => {
             </div>
 
             {/* Right Side: Orbital Photo Animation */}
-            <div className="relative w-[500px] h-[500px] flex items-center justify-center hidden lg:flex lg:mr-12">
+            <div className="relative w-[600px] h-[500px] flex items-center justify-center hidden lg:flex lg:mr-12">
                 <div className="absolute w-[450px] h-[450px] border border-slate-700 rounded-full border-dashed animate-[spin_40s_linear_infinite]" />
 
                 {photos.map((src, index) => {
