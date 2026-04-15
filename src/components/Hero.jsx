@@ -134,33 +134,33 @@ const Hero = () => {
             </div>
 
             {/* Right Side: Orbital Photo Animation */}
-            <div className="relative w-[400px] h-[400px] flex items-center justify-center">
-                <div
-                    className="absolute w-72 h-72 border border-slate-700 rounded-full border-dashed animate-[spin_20s_linear_infinite]"/>
+            <div className="relative w-[400px] h-[400px] flex items-center justify-center hidden lg:flex">
+                <div className="absolute w-72 h-72 border border-slate-700 rounded-full border-dashed animate-[spin_30s_linear_infinite]" />
 
                 {photos.map((src, index) => {
-                    const startAngle = index * 120;
+                    const startAngle = index * (360 / photos.length);
+
                     return (
                         <motion.div
                             key={index}
-                            className="absolute w-32 h-32"
-                            initial={{rotate: startAngle}}
-                            animate={{rotate: startAngle + 360}}
+                            className="absolute w-24 h-24"
+                            initial={{ rotate: startAngle }}
+                            animate={{ rotate: startAngle + 360 }}
                             transition={{
-                                duration: 20,
+                                duration: 30,
                                 repeat: Infinity,
                                 ease: "linear",
                             }}
-                            style={{originX: "200px", originY: "50%"}}
+                            style={{ originX: "200px", originY: "50%" }}
                         >
                             <motion.img
                                 src={src}
                                 alt={`Jacob Vaccaro ${index + 1}`}
-                                className="w-full h-full object-cover rounded-full border-4 border-blue-500 shadow-xl bg-slate-800"
-                                initial={{rotate: -startAngle}}
-                                animate={{rotate: -(startAngle + 360)}}
+                                className="w-full h-full object-cover rounded-full border-2 border-blue-500 shadow-xl bg-slate-800"
+                                initial={{ rotate: -startAngle }}
+                                animate={{ rotate: -(startAngle + 360) }}
                                 transition={{
-                                    duration: 20,
+                                    duration: 30, // Must match the duration above
                                     repeat: Infinity,
                                     ease: "linear",
                                 }}
@@ -169,7 +169,7 @@ const Hero = () => {
                     );
                 })}
 
-                <div className="w-24 h-24 bg-blue-600/20 blur-3xl rounded-full animate-pulse"/>
+                <div className="w-24 h-24 bg-blue-600/20 blur-3xl rounded-full animate-pulse" />
             </div>
 
         </section>
