@@ -134,38 +134,35 @@ const Hero = () => {
             </div>
 
             {/* Right Side: Orbital Photo Animation */}
-            <div className="relative w-[400px] h-[400px] flex items-center justify-center hidden lg:flex">
-                {/* The dashed orbit ring */}
-                <div className="absolute w-72 h-72 border border-slate-700 rounded-full border-dashed animate-[spin_30s_linear_infinite]" />
+            <div className="relative w-[500px] h-[500px] flex items-center justify-center hidden lg:flex lg:mr-12">
+                <div className="absolute w-[450px] h-[450px] border border-slate-700 rounded-full border-dashed animate-[spin_40s_linear_infinite]" />
 
                 {photos.map((src, index) => {
                     const startAngle = index * (360 / photos.length);
 
                     return (
-                        /* Invisible rotating wrapper matching the orbit ring size */
                         <motion.div
                             key={index}
-                            className="absolute w-72 h-72"
+                            className="absolute w-[450px] h-[450px]"
                             initial={{ rotate: startAngle }}
                             animate={{ rotate: startAngle + 360 }}
                             transition={{
-                                duration: 30,
+                                duration: 40, // Increased duration for a smoother, large-scale rotation
                                 repeat: Infinity,
                                 ease: "linear",
                             }}
                         >
-                            {/* The image, positioned perfectly at the top-center of the ring */}
                             <motion.img
                                 src={src}
                                 alt={`Jacob Vaccaro ${index + 1}`}
-                                className="absolute w-24 h-24 object-cover rounded-full border-2 border-blue-500 shadow-xl bg-slate-800"
-                                // 48px is exactly half of the w-24 (96px) width/height, perfectly centering it on the line
-                                style={{ top: "-48px", left: "calc(50% - 48px)" }}
-                                // Counter-rotate to keep the image upright
+                                // Increased image size to w-28 (112px)
+                                className="absolute w-28 h-28 object-cover rounded-full border-2 border-blue-500 shadow-xl bg-slate-800"
+                                // 56px is half of the w-28 (112px) size
+                                style={{ top: "-56px", left: "calc(50% - 56px)" }}
                                 initial={{ rotate: -startAngle }}
                                 animate={{ rotate: -(startAngle + 360) }}
                                 transition={{
-                                    duration: 30,
+                                    duration: 40,
                                     repeat: Infinity,
                                     ease: "linear",
                                 }}
@@ -174,8 +171,8 @@ const Hero = () => {
                     );
                 })}
 
-                {/* Center Focal Point */}
-                <div className="absolute w-24 h-24 bg-blue-600/20 blur-3xl rounded-full animate-pulse" />
+                {/* Center Focal Point scaled up to match */}
+                <div className="absolute w-40 h-40 bg-blue-600/10 blur-3xl rounded-full animate-pulse" />
             </div>
 
         </section>
