@@ -52,7 +52,7 @@ const Education = () => {
                             <p><strong className="text-white">College:</strong> School of Computing (College of
                                 Engineering)</p>
                             <p><strong className="text-white">Started:</strong> August 2022</p>
-                            <p><strong className="text-white">Expected Graduation:</strong> May 2026</p>
+                            <p><strong className="text-white">Graduated:</strong> May 2026</p>
                         </div>
 
                         <div>

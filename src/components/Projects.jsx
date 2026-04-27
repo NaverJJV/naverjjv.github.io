@@ -5,7 +5,7 @@ const Projects = () => {
     const projects = [
         {
             title: "NextGenTV ATSC 3.0 Application (Nebraska Public Media)",
-            date: "August 2024 - Present",
+            date: "August 2024 - May 2026",
             type: "Client Project",
             featured: true,
             description: `
@@ -25,7 +25,7 @@ const Projects = () => {
         },
         {
             title: "Folklore & Character Database App",
-            date: "March 2026 - Present",
+            date: "March 2026 - May 2026",
             type: "Open Source",
             description: "Developed a centralized archive for storing and displaying character profiles and stories grounded in American folklore. The system is designed to organize narratives and historical research around figures like John Henry and Jesse James.",
             tech: ["React", "Node.js", "PostgreSQL", "Data Archiving", "Full Stack Development"],

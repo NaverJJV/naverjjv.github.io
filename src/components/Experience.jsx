@@ -30,14 +30,14 @@ const Experience = () => {
                     <VerticalTimelineElement
                         contentStyle={{ background: '#1e293b', color: '#fff', borderRadius: '0.75rem' }}
                         contentArrowStyle={{ borderRight: '7px solid #1e293b' }}
-                        date="August 2025 - Present"
+                        date="August 2025 - May 2026"
                         dateClassName="text-slate-500 lg:text-slate-800 font-semibold"
                         iconStyle={{ background: '#2563eb', color: '#fff' }}
                     >
                         <h3 className="text-2xl font-bold">Product Manager & Squad Lead</h3>
                         <h4 className="text-lg text-blue-400 mt-1">Nebraska Public Media (UNL Senior Design) | Lincoln, NE</h4>
                         <p className="mt-4 text-slate-300 font-light leading-relaxed">
-                            Leading a cross-functional squad of five developers for a production-level application. I serve as the primary communication liaison between engineering and stakeholders for Nebraska Public Media.
+                            Led a cross-functional squad of six developers for a production-level application. I served as the primary communication liaison between engineering and stakeholders for the Nebraska Public Media senior design project.
                         </p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
