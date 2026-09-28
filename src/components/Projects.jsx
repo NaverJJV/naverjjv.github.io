@@ -1,8 +1,24 @@
-import {FaGithub, FaLock, FaTv} from 'react-icons/fa';
+import {FaCar, FaGithub, FaLock, FaTv} from 'react-icons/fa';
 import {motion} from "framer-motion";
 
 const Projects = () => {
     const projects = [
+        {
+            title: "RAGE Vehicles",
+            date: "July 2026 - Present",
+            type: "Internal Project",
+            featured: true,
+            description: `
+        <p class="mb-3">Built a fleet information web application largely from scratch for RAGE Energy, bringing company vehicle and driver records into one place.</p>
+        <ul class="list-disc ml-6 space-y-2 mb-5 text-slate-700">
+          <li><strong class="text-slate-900">Fleet records:</strong> Displays vehicle and driver data from PostgreSQL and lets users associate drivers with vehicles.</li>
+          <li><strong class="text-slate-900">Live fleet view:</strong> Pulls live vehicle data from Ford Telematics and displays the fleet on a map, using Geocodio for geocoding and OpenStreetMap for the map view.</li>
+          <li><strong class="text-slate-900">Full-stack delivery:</strong> Developed with TypeScript, React, and Vite; hosted on Microsoft Azure with Microsoft Entra authentication.</li>
+        </ul>
+      `,
+            tech: ["TypeScript", "React", "Vite", "PostgreSQL", "Ford Telematics API", "Geocodio", "OpenStreetMap", "Microsoft Azure", "Microsoft Entra ID"],
+            icon: <FaCar className="text-blue-600"/>
+        },
         {
             title: "NextGenTV ATSC 3.0 Application (Nebraska Public Media)",
             date: "August 2024 - May 2026",
@@ -120,7 +136,7 @@ const Projects = () => {
 
                             <div className="mb-4">
                 <span
-                    className={`text-xs font-bold px-2 py-1 rounded-md ${project.type === 'Open Source' ? 'bg-green-100 text-green-700' : project.type === 'Client Project' ? 'bg-purple-100 text-purple-700' : 'bg-slate-200 text-slate-600'}`}>
+                    className={`text-xs font-bold px-2 py-1 rounded-md ${project.type === 'Open Source' ? 'bg-green-100 text-green-700' : ['Client Project', 'Internal Project'].includes(project.type) ? 'bg-purple-100 text-purple-700' : 'bg-slate-200 text-slate-600'}`}>
                   {project.type}
                 </span>
                             </div>

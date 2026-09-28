@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 import {FaJava, FaNodeJs, FaReact} from "react-icons/fa";
-import {SiJavascript, SiDotnet, SiPython, SiSnowflake, SiDbt} from "react-icons/si";
+import {SiJavascript, SiDotnet, SiPython, SiSnowflake, SiDbt, SiTypescript, SiPostgresql} from "react-icons/si";
 import {TbBrandCSharp, TbDatabase} from "react-icons/tb";
 import {VscAzure} from "react-icons/vsc";
 
@@ -22,6 +22,8 @@ const Hero = () => {
         {name: "Node.js", icon: <FaNodeJs className="text-green-500 text-lg"/>},
         {name: "JavaScript", icon: <SiJavascript className="text-yellow-400 text-lg"/>},
         {name: "React", icon: <FaReact className="text-cyan-400 text-lg"/>},
+        {name: "TypeScript", icon: <SiTypescript className="text-blue-400 text-lg"/>},
+        {name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400 text-lg"/>},
         {name: "SQL", icon: <TbDatabase className="text-red-400 text-lg"/>},
         {name: "Java", icon: <FaJava className="text-orange-500 text-lg"/>},
         {name: "Azure", icon: <VscAzure className="text-blue-400 text-lg"/>},
@@ -36,7 +38,7 @@ const Hero = () => {
 
     return (
         <section id="summary"
-                 className="relative w-full h-screen mx-auto flex flex-col md:flex-row items-center justify-between px-10 bg-slate-900 text-white overflow-hidden">
+                 className="relative w-full min-h-screen mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-6 sm:px-10 py-20 bg-slate-900 text-white overflow-hidden">
 
             {/* Left Side: Content */}
             <div className="z-10 max-w-2xl">
@@ -44,7 +46,7 @@ const Hero = () => {
                     initial={{opacity: 0, x: -50}}
                     whileInView={{opacity: 1, x: 0}}
                     viewport={{once: false, amount: 0.3}}
-                    className="text-6xl font-extrabold"
+                    className="text-4xl sm:text-6xl font-extrabold"
                 >
                     Jake Vaccaro
                 </motion.h1>
@@ -66,15 +68,10 @@ const Hero = () => {
                     viewport={{once: false, amount: 0.3}}
                     className="mt-6 text-lg leading-relaxed text-slate-300"
                 >
-                    With over <strong className="text-white">3 years of production experience</strong>, I thrive in
-                    environments where I can take ownership of complex problems and deliver meaningful features. I have
-                    a proven track record of architecting scalable data models in <strong
-                    className="text-white">Snowflake</strong>, building automated transformation pipelines, and
-                    leveraging <strong className="text-white">AI capabilities</strong> to drive operational
-                    intelligence. Beyond data systems, I bring extensive experience in full-stack web development,
-                    creating intuitive front-end implementations and robust API-driven workflows. I approach engineering
-                    as a highly adaptable problem solver, capable of taking on projects with virtually any tech stack
-                    and leading cross-functional teams to build high-impact solutions.
+                    I build practical software across <strong className="text-white">data, web applications, and business systems</strong>.
+                    At RAGE Energy, I model data in Snowflake and dbt, create Metabase dashboards, develop internal
+                    applications and integrations, and help manage SharePoint and the company website. I enjoy taking
+                    on new technology initiatives and working across teams to turn a need into a useful, reliable solution.
                 </motion.div>
 
                 {/* Breadth of Stack Tags with Icons */}

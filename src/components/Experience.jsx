@@ -3,14 +3,14 @@ import 'react-vertical-timeline-component/style.min.css';
 
 // Using stable icon sets to avoid export errors
 import {
-    FaNodeJs, FaGithub, FaJava, FaDatabase, FaHtml5, FaBroadcastTower, FaBrain
+    FaNodeJs, FaJava, FaDatabase, FaHtml5, FaBroadcastTower, FaBrain, FaReact
 } from 'react-icons/fa';
 import {
     SiMongodb, SiPostgresql, SiGoogleanalytics, SiJavascript,
-    SiDotnet, SiApachemaven, SiBootstrap, SiSnowflake, SiDbt, SiPython
+    SiDotnet, SiApachemaven, SiBootstrap, SiSnowflake, SiDbt, SiPython, SiTypescript
 } from 'react-icons/si';
 import { TbBrandCSharp, TbDatabase } from 'react-icons/tb';
-import { VscAzure, VscCode } from 'react-icons/vsc';
+import { VscAzure } from 'react-icons/vsc';
 import { AiOutlineApi } from 'react-icons/ai';
 import { DiVisualstudio } from 'react-icons/di';
 
@@ -35,12 +35,15 @@ const Experience = () => {
                         iconStyle={{ background: '#2563eb', color: '#fff' }}
                     >
                         <h3 className="text-2xl font-bold">Data Engineer</h3>
-                        <h4 className="text-lg text-blue-400 mt-1">RAGE (Rasmussen Air and Gas Energy)</h4>
+                        <h4 className="text-lg text-blue-400 mt-1">RAGE Energy (Rasmussen Air and Gas Energy)</h4>
                         <p className="mt-4 text-slate-300 font-light leading-relaxed">
-                            Designing and maintaining scalable data models in <strong className="text-white">Snowflake</strong> while developing automated transformation pipelines using dbt, Python, and SQL. Responsible for supporting analytics platforms like Power BI and Metabase to ensure high-quality, reliable datasets.
+                            I design <strong className="text-white">Snowflake</strong> data models and build dbt, Python, and SQL pipelines that make operational data reliable and useful. I also create Metabase dashboards and support reporting across the business.
                         </p>
                         <p className="mt-4 text-slate-300 font-light leading-relaxed">
-                            Building API-driven workflows and system integrations across platforms such as HubSpot and internal ERP systems. Leading innovation efforts by exploring AI capabilities, including <strong className="text-white">Snowflake Cortex</strong>, to apply AI-driven approaches to forecasting and operational intelligence in collaboration with cross-functional teams.
+                            I build internal web applications, including <strong className="text-white">RAGE Vehicles</strong>, and API integrations connecting platforms such as HubSpot and ERP systems. I help manage the company's <strong className="text-white">SharePoint and website</strong> and take on software projects and new technology initiatives wherever they are needed.
+                        </p>
+                        <p className="mt-4 text-slate-300 font-light leading-relaxed">
+                            I partner with teams across the company to automate workflows and explore practical uses for emerging tools, including Snowflake Cortex.
                         </p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
@@ -62,6 +65,12 @@ const Experience = () => {
                             <span className={`${badgeStyle} bg-slate-700 border-slate-600 text-slate-200`}>
                 <AiOutlineApi className="text-green-400" /> APIs
               </span>
+                            <span className={`${badgeStyle} bg-slate-700 border-slate-600 text-slate-200`}>
+                <SiTypescript className="text-blue-400" /> TypeScript
+              </span>
+                            <span className={`${badgeStyle} bg-slate-700 border-slate-600 text-slate-200`}>
+                <FaReact className="text-cyan-400" /> React
+              </span>
                         </div>
                     </VerticalTimelineElement>
 
@@ -69,14 +78,17 @@ const Experience = () => {
                     <VerticalTimelineElement
                         contentStyle={{ background: '#f8fafc', color: '#0f172a', border: '1px solid #e2e8f0', borderRadius: '0.75rem' }}
                         contentArrowStyle={{ borderRight: '7px solid #e2e8f0' }}
-                        date="August 2025 - May 2026"
+                        date="September 2025 - May 2026"
                         dateClassName="text-slate-500 lg:text-slate-800 font-semibold"
                         iconStyle={{ background: '#0284c7', color: '#fff' }}
                     >
-                        <h3 className="text-2xl font-bold">Product Manager & Squad Lead</h3>
+                        <h3 className="text-2xl font-bold">Project Manager & Squad Lead</h3>
                         <h4 className="text-lg text-sky-600 mt-1">Nebraska Public Media (UNL Senior Design)</h4>
                         <p className="mt-4 text-slate-700 font-light leading-relaxed">
-                            Led a cross-functional squad of five developers for a production-level application. Served as the primary communication liaison between engineering and stakeholders for Nebraska Public Media.
+                            Returned at Nebraska Public Media's request to lead a six-developer squad on the NextGenTV application. I coordinated the roadmap, translated stakeholder needs into development priorities, and kept the team aligned on delivery.
+                        </p>
+                        <p className="mt-4 text-slate-700 font-light leading-relaxed">
+                            I also contributed Google Analytics tracking, live alerts for high-priority local emergencies, and educational games that made the TV experience more interactive.
                         </p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
@@ -96,14 +108,14 @@ const Experience = () => {
                     <VerticalTimelineElement
                         contentStyle={{ background: '#1e293b', color: '#fff', borderRadius: '0.75rem' }}
                         contentArrowStyle={{ borderRight: '7px solid #1e293b' }}
-                        date="June 2025 - August 2025"
+                        date="May 2025 - August 2025"
                         dateClassName="text-slate-500 lg:text-slate-800 font-semibold"
                         iconStyle={{ background: '#2563eb', color: '#fff' }}
                     >
                         <h3 className="text-2xl font-bold">Software Engineering Intern</h3>
                         <h4 className="text-lg text-blue-400 mt-1">Quest Analytics, LLC | Overland Park, KS</h4>
                         <p className="mt-4 text-slate-300 font-light leading-relaxed">
-                            Modernized features for Quest Enterprise Services on the <strong className="text-white">"Bravo" team</strong>. Focused on healthcare provider management tools and regulatory compliance systems.
+                            Modernized legacy features for Quest Enterprise Services on the <strong className="text-white">Bravo team</strong>, using C# and .NET in an Azure environment to improve maintainability and performance. Worked with SQL Server and MongoDB in Agile data workflows supporting healthcare provider management and compliance tools.
                         </p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
@@ -139,7 +151,7 @@ const Experience = () => {
                         <h3 className="text-2xl font-bold">Development Manager</h3>
                         <h4 className="text-lg text-sky-600 mt-1">Nebraska Public Media (UNL Senior Design)</h4>
                         <p className="mt-4 text-slate-700 font-light leading-relaxed">
-                            Managed the initial architectural setup and <strong className="text-slate-900">CI/CD pipelines</strong> for the NextGenTV ATSC 3.0 application. Built using the Run3TV framework for regional PBS affiliates.
+                            Managed Git, development environments, and <strong className="text-slate-900">CI/CD pipelines</strong> for a six-developer team building a NextGenTV ATSC 3.0 application on the Run3TV framework. The project earned UNL's Platinum Award and was shown at NAB 2025.
                         </p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
@@ -169,7 +181,10 @@ const Experience = () => {
                         <h3 className="text-2xl font-bold">Software Intern</h3>
                         <h4 className="text-lg text-blue-400 mt-1">Operational Technology (University of Nebraska)</h4>
                         <p className="mt-4 text-slate-300 font-light leading-relaxed">
-                            Architected core functionality for <strong className="text-white">Redbeam</strong>, an internal Energy Management System managing HVAC hardware across all four University of Nebraska campuses.
+                            Developed features for <strong className="text-white">Redbeam</strong>, an energy management system used across the University of Nebraska campuses. I improved the Incidents interface, added trend-log and hybrid telemetry support, and built batch tagging and object status displays.
+                        </p>
+                        <p className="mt-4 text-slate-300 font-light leading-relaxed">
+                            I also refined incident notifications and search behavior, created a four-level search guide, and worked with senior developers to debug and deliver updates in an Agile team.
                         </p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
